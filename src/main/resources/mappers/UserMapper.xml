@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cqjtu.csproject.dao.UserMapper">
+
+    <resultMap type="com.cqjtu.csproject.dao.model.Users" id="usersMap">
+        <result column="UserId" property="userId"/>
+        <result column="UName" property="uName"/>
+        <result column="UPassword" property="uPassWord"/>
+
+    </resultMap>
+
+    <select id="findByUName" resultMap="usersMap" >
+        select * from user where UName=#{uName}
+    </select>
+    <insert id="insert" parameterType="com.cqjtu.csproduct.dao.model.Users">
+        INSERT into user(UserId,UPassword,UName) values(#{userId},#{uPassWrd},#{uName})
+    </insert>
+    <update id="update">
+        UPDATE user SET UName=#{uName} where UId=#{uId}
+    </update>
+    <delete id="deleteByUId">
+        DELETE FROM user where UserId=#{userId}
+    </delete>
+
+    <select id="userLogin" resultMap="usersMap">
+        SELECT * FROM user WHERE UName=#{username} AND UPassword=#{password}
+    </select>
+
+</mapper>

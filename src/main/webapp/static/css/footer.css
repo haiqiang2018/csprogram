@@ -1,0 +1,92 @@
+
+/*--footer--*/
+.footer_top{
+    background:#ededed;
+    padding:3em 0;
+}
+.grid-3 h3{
+    color: #414141;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+ul.footer_list, ul.footer_social{
+    padding:0;
+    list-style:none;
+}
+ul.footer_list li a{
+    color: #777;
+    font-size: 0.8125em;
+    font-weight: 500;
+    line-height: 1.8em;
+}
+ul.footer_list li a:hover{
+    text-decoration:none;
+    color:#fd926d;
+}
+
+ul.footer_social li:first-child {
+    margin-left: 0;
+}
+ul.footer_social li {
+    display: inline-block;
+    margin-right: 5px;
+}
+ul.footer_social li a i {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: url(../img/img-sprite.png)no-repeat;
+}
+ul.footer_social li a i.tw1{
+    background-position: -3px -39px;
+}
+ul.footer_social li a i.db1{
+    background-position:-45px -39px;
+}
+ul.footer_social li a i.fb1{
+    background-position:-88px -39px;
+}
+ul.footer_social li a i.g1{
+    background-position:-3px -86px;
+}
+ul.footer_social li a i.thumb{
+    background-position:-47px -86px;
+}
+ul.footer_social li a i.vimeo{
+    background-position:-95px -86px;
+}
+ul.footer_social li a i:hover{
+    opacity:0.8;
+}
+.footer_bottom{
+    background:#000;
+    padding:1em 0;
+}
+.cssmenu {
+    float:left;
+    color: #999;
+    font-size: 0.8125em;
+}
+.cssmenu ul li {
+    display: inline-block;
+}
+.cssmenu ul li a {
+    color: #999;
+    display: block;
+    margin: 10px;
+}
+.cssmenu ul li a:hover{
+    text-decoration:none;
+    color:#fd926d;
+}
+.copy {
+    float:right;
+    margin-top: 12px;
+}
+.copy p {
+    color:#999;
+    font-size: 0.8125em;
+}
+.copy p a{
+    color:#fd926d;
+}

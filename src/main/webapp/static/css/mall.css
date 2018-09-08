@@ -1,0 +1,185 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html body{
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica,sans-serif;
+    font:12px/1.5 tahoma,arial,"\5b8b\4f53";
+    color: #999;
+    clear: both;
+}
+h5{
+    font-family: initial;
+    color: #101010;
+    margin: 4px;
+}
+div{
+    display: block;
+    background: white;
+}
+em{
+    font-style: normal;
+    font-weight: normal;
+}
+hr{border: 0.5px dashed #e5e5e5;width: 90%;margin: 4px}
+a{
+    text-decoration: none;
+    color: #999;
+    display: inline-block;
+    margin-left: 10px;
+
+}
+a:hover{
+    color: red;
+
+}
+#mallPage{
+    width:auto;
+    min-width: 990px;
+    background-color: transparent;
+}
+#mallPage-nav{
+    width:100%;
+    height: 26px;
+    background: #F2F2F2;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    min-width: 990px;
+    z-index: 9999;
+    line-height: 26px;
+}
+ #mallPage #header #content #footer{
+    width: auto;
+     min-width: 990px;
+     background: #FFF;
+
+}
+#header{
+    height:122px;
+    margin-top: -26px;
+    position: relative;
+    z-index: 1000;
+}
+#content{
+    background: #F5F5F5;
+    height: auto;
+}
+#footer{
+    background: #FFFFFF;
+    min-height: 560px;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    position: relative;
+}
+ul li{
+    list-style: none;
+    display: block;
+    right: 0;
+
+}
+.mn-login .mn-register{
+    display: block;
+    width: 68px;
+
+}
+li{
+    float: left;
+    margin-left: 8px;
+}
+
+.mn-quick-menu{
+    float: right;
+    margin-left: 690px;
+    position: absolute;
+}
+
+#mn-container{
+    width: 1208px;
+    margin: 0px auto;
+    position: relative;
+
+}
+#login-intro{
+    display:inline-block;
+    float: left;
+}
+.mn-menu-mt{
+    background: #FFFFFF;
+
+}
+
+.mn-menu-mt #mallPage-nav .mmn-mobile .mn-mycart .mn-myfavorite .mn-mytaobao .mn-seller .mn-separator .mn-sitemap{
+    padding: 8px 10px;
+    line-height: 1.4;
+}
+
+.mn-menu-mt{
+    display: none;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    margin: 0 1px 0 10px;
+}
+
+.mytaobao-a:hover{
+    background: #FFFFFF;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.mn-mytaobao {
+    width: 85px;
+}
+.mn-myfavorite{
+    width: 80px;
+    margin-left: -3px;
+}
+.mytaobao-a {
+    margin-top: -1px;
+    padding: 0 4px 0 6px;
+}
+
+.mcl{
+    margin-right: -7px;
+    font-size: smaller;
+    color: red;
+}
+
+.mobile-img{
+    background: url("../img/mobile_tianmao.jpg");
+    width: 175px;
+    background-size: cover;
+    height: 215px;
+    box-shadow: 1px 1px 20px grey;
+    margin: -1px 0 0 -35px;
+    display: none;
+}
+.mn-mobile{
+    width: 175px;
+}
+.mn-home{
+    margin-left: -122px;
+    width: 50px;
+}
+.mn-seller{
+    margin-left: -75px;
+
+}
+
+.sd-div{
+    display: none;
+    width: 150px;
+    border: 1px solid #e5e5e5;
+    border-top:none ;
+    height: 190px;
+    margin-left: -68px;
+}
+.sellers {
+    width:135px;
+}
+._left ._right{
+    margin-top: -2px;
+}
+.mn-sitemap{
+    margin-left: 10px;
+}

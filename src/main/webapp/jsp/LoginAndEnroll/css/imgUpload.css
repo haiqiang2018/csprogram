@@ -1,0 +1,28 @@
+.dv_pic_item{
+    width: 200px;
+    height: 260px;
+    margin: 5px 5px;
+    float: left;
+}
+.btn_add_pic{
+    width: 80px;
+    height: 30px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    background-color: #00BCD4;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.input_file_style{
+    width: 200px;
+    height: 20px;
+}
+.img_style{
+    width: 200px;
+    height: 240px;
+    display: block;
+    background-size: 100% auto;
+}  

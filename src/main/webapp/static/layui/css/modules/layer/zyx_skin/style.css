@@ -1,0 +1,11 @@
+/*
+定义了自己的layui皮肤样式
+*/
+body .layer-ext-yourskin .layui-layer-title{
+    color: #d0ec16;
+    border: none;
+    background: linear-gradient(to right, #1A93F3CC , #46E64EE6);
+    font-size: 17px;
+}
+body .layer-ext-yourskin .layui-layer-btn{border-top:1px solid #E9E7E7}
+body .layer-ext-yourskin .layui-layer-btn a{background:#333;}
