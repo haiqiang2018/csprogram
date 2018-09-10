@@ -2,17 +2,14 @@ package com.cqjtu.csproject.dao;
 
 
 import com.cqjtu.csproject.dao.model.Users;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface UserMapper {
 
-    public String findByUName(String uName);
-    public int insert(Users user);
-    public int deleteByUId(int userId);
-    public int update(Users user);
+    Users findById(String userId);
 
-    List<Users> userLogin(String username, String password);
-
-    public Users findById(String userId);
+    Users userLogin(@Param("userId") String userId,
+                    @Param("passWords") String passWords);
 }

@@ -21,10 +21,10 @@
     </update>
     <delete id="deleteByUId">
         DELETE FROM user where UserId=#{userId}
-    </delete>
+    </delete>-->
 
-    <select id="userLogin" resultMap="usersMap">
-        SELECT * FROM user WHERE UName=#{username} AND UPassword=#{password}
+    <select id="userLogin" resultType="com.cqjtu.csproject.dao.model.Users">
+        SELECT * FROM user WHERE UserId=#{userId}
     </select>
--->
+
 </mapper>

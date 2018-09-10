@@ -84,7 +84,7 @@
 
         $("#sub_log").click(function () {
             $.ajax({//前后台用ajax传值
-                url:"<c:url value="userLogin" />",
+                url:"<c:url value="/user/userLogin" />",
                 type:"post",
                 dataType:"json",
                 async:false,
@@ -93,7 +93,7 @@
                     PassWords:$("#PassWords").val()/*$.md5(document.getElementById('PassWords').value)*/
                 },
                  success:function (respData) {
-                    var state=respData.state;
+                    var state=respData.loginscuccess;
                     var tip=respData.tip;
                     if(state){
                         alert(tip);

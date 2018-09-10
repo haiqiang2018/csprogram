@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -108,8 +109,15 @@
         <!--End 所在收货地区 End-->
         <span class="fr">
 
-        	<span class="fl">你好，请<a href="/jsp/LoginAndEnroll/login.jsp">登录</a>&nbsp; <a href="/jsp/LoginAndEnroll/enroll.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a
+        	<span class="fl">
+                <c:if test="${username != null}">
+                    &nbsp;欢迎您，<a href="#">${username}&nbsp;</a>
+                </c:if>
+                <c:if test="${empty username}">
+                 你好，请<a href="/jsp/LoginAndEnroll/login.jsp">登录</a>&nbsp; <a href="/jsp/LoginAndEnroll/enroll.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a
                     href="#">我的订单</a>&nbsp;|</span>
+                </c:if>
+
         	<span class="ss">
             	<div class="ss_list">
                 	<a href="#">收藏夹</a>
