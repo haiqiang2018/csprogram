@@ -16,14 +16,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link type="text/css" rel="stylesheet" href="../../static/layui/css/layui.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/extraStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="css/extraStyle.css?v=20180909"/>
     <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_644487_hugi3stbvw7v6lxr.css"/>
     <script src="../../static/layui/layui.js"></script>
 </head>
 <body>
 <jsp:include page="../header.jsp"/>
 <div class="extra-login">
-    <img src="./img/7.png">
+    <img src="./img/nz1.jpg">
     <div class="extra-login-div">
         <a href="AdLogin.jsp" style="font-size: 16px;float: right;">管理员入口</a>
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;"><br>
@@ -84,7 +84,7 @@
 
         $("#sub_log").click(function () {
             $.ajax({//前后台用ajax传值
-                url:"<c:url value="/userLogin" />",
+                url:"<c:url value="/user/userLogin" />",
                 type:"post",
                 dataType:"json",
                 async:false,

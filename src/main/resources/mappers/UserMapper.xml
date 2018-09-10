@@ -12,7 +12,7 @@
     </resultMap>
 
     <select id="findByUName" resultMap="usersMap" >
-        select * from user where UName=#{uName}
+        select * from user
     </select>
     <insert id="insert" parameterType="com.cqjtu.csproduct.dao.model.Users">
         INSERT into user(UserId,UPassword,UName) values(#{userId},#{uPassWrd},#{uName})
