@@ -14,16 +14,15 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link type="text/css" rel="stylesheet" href="../layui/css/layui.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/extraStyle.css"/>
+    <link type="text/css" rel="stylesheet" href="../../static/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/extraStyle.css?v=20180909"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="css/flow.css"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css"/>
-    <script src="../layui/layui.js"></script>
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/jquery.js"></script>
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/common/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../../static/layui/layui.js"></script>
+    <script src="../../static/common/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="../../static/common/jQuery/jquery.js"></script>
     <style type='text/css'>
         #code{
             font-family:Arial,宋体;
@@ -110,6 +109,10 @@
     </style>
     <script type="text/javascript">
         $(function() {
+            $(".top").hide();
+            $("#footer_t").hide();
+            $(".b_nav").hide();
+            $(".s_city_b").text();
             var aStr = ["弱", "中", "强", "牛逼"]
             ; function checkStrong(val) { var modes = 0;
                 if (val.length < 6) return 0;
@@ -163,7 +166,7 @@
                 <form class="layui-form" name="form21" method="post" action="">
                     <div class="layui-form-item"style="margin: 30px">
                         <label class="layui-form-label"style="margin-left: 80px;"> 登录名: </label>
-                        <input id="UserName" name="UserName" class="layui-input extra-input"style="display: inline" onblur="checkun()"type="text" placeholder=" 用户名/学号 " value=""autocomplete="off">
+                        <input id="UserName" name="UserName" class="layui-input extra-input"style="display: inline" onblur="checkun()"type="text" placeholder=" 用户名/手机号 " value=""autocomplete="off">
                         <label id="m1"class=""style="color: red"></label>
                     </div>
                     <div class="layui-form-item"style="margin: 30px">
@@ -301,7 +304,7 @@
         </div>
     </div>
 </div>
-
+<jsp:include page="../footer.jsp"/>
 <%--<div>验证码：
     <input type = "text" id = "input"/>
     <input type="button" id="code" onclick="createCode()" style="width:60px" title='点击更换验证码' />

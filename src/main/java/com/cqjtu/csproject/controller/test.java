@@ -16,13 +16,12 @@ public class test {
 
     @RequestMapping("getUser")
     @ResponseBody
-    public Users getUser(int i){
+    public Users getUser(int userId){
         Users users = new Users();
-
-        users.setpId(i);
+        users.setpId(userId);
         users.setuName("Bernie");
         users.setuPassWord("123456");
-
+        System.out.println(users);
         return users;
     }
 }

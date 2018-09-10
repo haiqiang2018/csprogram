@@ -31,7 +31,7 @@
 <body>
 
 <!--Begin Footer Begin -->
-<div class="b_btm_bg bg_color">
+<div id="footer_t" class="b_btm_bg bg_color">
     <div class="b_btm">
         <table border="0" style="width:210px; height:62px; float:left; margin-left:75px; margin-top:30px;"
                cellspacing="0" cellpadding="0">
@@ -46,7 +46,7 @@
             <tr>
                 <td width="72"><img src="http://www.17sucai.com/preview/216556/2016-02-18/尤洪Web/images/b2.png"
                                     width="62" height="62"/></td>
-                <td><h2>满38包邮</h2>满38包邮 免运费</td>
+                <td><h2>满38包邮</h2>满38包邮 免运费，优先顺丰</td>
             </tr>
         </table>
         <table border="0" style="width:210px; height:62px; float:left; margin-left:75px; margin-top:30px;"
@@ -116,7 +116,7 @@
 </div>
 <div class="btmbg">
     <div class="btm">
-        备案/许可证编号：蜀ICP备12009302号-1-www.dingguagua.com Copyright © 2015-2018 尤洪商城网 All Rights Reserved. 复制必究 , Technical
+        备案/许可证编号：蜀ICP备12009302号-1-www.134happy.com Copyright © 2015-2018 134商城网 All Rights Reserved. 复制必究 , Technical
         Support: Dgg Group <br/>
         <img src="http://www.17sucai.com/preview/216556/2016-02-18/尤洪Web/images/b_1.gif" width="98" height="33"/><img
             src="http://www.17sucai.com/preview/216556/2016-02-18/尤洪Web/images/b_2.gif" width="98" height="33"/><img

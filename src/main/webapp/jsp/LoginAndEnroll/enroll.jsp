@@ -15,18 +15,21 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../static/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="css/extraStyle.css" media="all">
     <link rel="stylesheet" href="css/imgUpload.css" media="all">
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/jquery.js"></script>
+    <script src="../../static/common/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="../../static/common/jQuery/jquery.js"></script>
     <script src="js/ajaxFileUpload.js"></script>
     <!--引入Bootstrap的js-->
-    <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/common/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <!--引入LayUi的js-->
-    <script src="../layui/layui.js"></script>
+    <script src="../../static/layui/layui.js"></script>
     <script type="text/javascript">
         $(function() {
+            $(".top").hide();
+            $("#footer_t").hide();
+            $(".b_nav").hide();
             var aStr = ["弱", "中", "强", "牛逼"]
             ; function checkStrong(val) { var modes = 0;
             if (val.length < 6) return 0;
@@ -39,7 +42,9 @@
             $(":password").keyup(function() {
                 var val = $(this).val();
                 $("p1").text(val.length);
-                var num = checkStrong(val);
+                var num = checkStrong(val)
+
+                ;
                 switch (num) {
                     case 0: break;
                     case 1: $("#tips span").css('background', 'yellow').text('').eq(num - 1).css('background', 'red').text(aStr[num - 1]);
@@ -56,28 +61,15 @@
     </script>
 </head>
 <body>
-<div style="width: 80%;height:121px;margin: auto">
-    <div id="logo" style="width: 30%;height:100%;float: left">
-        <img src="../Rent/img/logo.png" style="margin-left: -40px ;width:100%; height:100%">
-    </div>
-
-</div>
+<jsp:include page="../header.jsp"/>
 <div style="width: 990px;
-    margin: -20px 220px;
-    height: 700px;">
+    margin: 30px 220px;
+    height: 450px;">
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;margin-left: -65px;
 margin-bottom: 30px;">
     <legend><strong>新用户注册</strong></legend>
 </fieldset>
 <form class="layui-form" name="form1">
-    <div class="layui-form-item">
-        <div class="layui-inline">
-        <label class="layui-form-label">*输入学号：</label>
-        <div class="layui-input-inline">
-            <input type="text" id="User_ID"name="User_ID" lay-verify="required|title"  placeholder="请输入你的学号" class="layui-input extra-input">
-        </div>
-        </div>
-    </div>
     <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label">*手机号码：</label>
@@ -103,70 +95,12 @@ margin-bottom: 30px;">
         </div>
     </div>
     <div class="layui-form-item">
-      <div class="layui-inline">
-        <label class="layui-form-label">*注册日期：</label>
-        <div class="layui-input-inline">
-            <input type="text" name="EnrollDate" id="EnrollDate" lay-verify="<%--required|--%>date" placeholder="年-月-日" autocomplete="off" class="layui-input extra-input">
-        </div>
-    </div>
-    </div>
-    <div class="layui-form-item">
-        <div class="layui-inline">
-        <label class="layui-form-label">*输入学校：</label>
-        <div class="layui-input-inline">
-            <select name="quiz1">
-                <option value="">请选择省/市</option>
-                <option value="重庆" selected="">重庆市</option>
-            </select>
-        </div>
-        <div class="layui-input-inline">
-            <select name="quiz2">
-                <option value="">请选择市/区</option>
-                <option value="江津">江津区</option>
-                <option value="南岸" >南岸区</option>
-                <option value=""disabled=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-        </div>
-        <div class="layui-input-inline">
-            <select name="quiz3">
-                <option value="">请选择学校</option>
-                <option value="重庆交通大学">重庆交通大学</option>
-                <option value="重庆工商大学">重庆工商大学</option>
-                <option value=""></option>
-            </select>
-        </div>
-        </div>
-    </div>
-    <div class="layui-form-item">
         <div class="layui-inline">
         <label class="layui-form-label">性别：</label>
         <div class="layui-input-block">
             <input type="radio" name="Sex" value="男" title="男" checked="">
             <input type="radio" name="Sex" value="女" title="女">
             <input type="radio" name="Sex" value="禁" title="禁用" disabled="">
-        </div>
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <div class="layui-inline">
-        <label class="layui-form-label"style=" margin: 10px">*学生证照片：</label>
-        <div class="layui-upload">
-            <div>
-                <button type="button" class="layui-btn extra-btn " id="uploadimg"style="margin-top:7px">点击上传</button>
-                <div>
-                    <div class="layui-upload-list"style="width: 300px;">
-                        <div class="layui-upload-list"style="width: 300px;margin-top: 15px">
-                            <img class="layui-upload-img upload-img" id="demo1">
-                        </div>
-                        <div class="layui-upload-list"style="width: 300px;float: left;display: inline;margin-left:280px;margin-top:-90px">
-                            （注：证件必须是清晰彩色原件电子版，可以是扫描件或者数码拍摄照片，仅支持.jpg .jpeg .bmp 的图片格式。图片大小不得超过来2M）<br>
-                        </div>
-                        <p id="demoText"></p>
-                    </div>
-                </div>
-            </div>
         </div>
         </div>
     </div>
@@ -195,7 +129,7 @@ margin-bottom: 30px;">
     <div class="layui-form-item">
         <div class="layui-input-block">
             <input  type="button"class="layui-btn extra-btn" lay-submit="" id="sub_enroll" lay-filter="demo1"value="立即提交">
-            <button type="reset" class="layui-btn layui-btn-primary extra-btn">重置</button>
+            <button type="reset" class="layui-btn  extra-btn">重置</button>
         </div>
     </div>
   <%--  <div class="dv_info_box">
@@ -205,6 +139,7 @@ margin-bottom: 30px;">
     </div>--%>
 </form>
 </div>
+<jsp:include page="../footer.jsp"/>
 <script src="js/md5.js"></script>
 <script>
     $(function () {
@@ -269,6 +204,7 @@ function initClickListener() {
 --%>
 <script>
     layui.use('upload', function() {
+
         var $ = layui.jquery
             , upload = layui.upload;//取得对象
 

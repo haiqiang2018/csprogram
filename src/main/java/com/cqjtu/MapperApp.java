@@ -2,16 +2,22 @@ package com.cqjtu;
 
 import com.cqjtu.csproject.dao.UserMapper;
 import com.cqjtu.csproject.dao.model.Users;
+import com.cqjtu.csproject.service.UserService;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 public class MapperApp {
     public static void main(String [] args) {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("beans-anno.xml");
+        UserService us = ac.getBean("userService",UserService.class);
+        System.out.println(us.userLogin("李四","111"));
         String resource = "MyBatisCfg.xml"; //1.加载全局配置文件.xml
         InputStream is=null;
         try {
@@ -21,14 +27,12 @@ public class MapperApp {
             SqlSession ss=ssf.openSession();
             //增删查改
             UserMapper um=ss.getMapper(UserMapper.class);
-            Users user=um.findByUName("Bernie");
+            Users user=um.findByUName("李四");
             System.out.println(user);
             /*//增
             Users u1=new Users();
             u1.setuName("王五");
             u1.setuPassWord("ppp");
-
-
             um.insert(u1);
             ss.commit();
             //改
@@ -42,8 +46,6 @@ public class MapperApp {
             um.deleteByUId(2);
 
             ss.commit();*/
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }

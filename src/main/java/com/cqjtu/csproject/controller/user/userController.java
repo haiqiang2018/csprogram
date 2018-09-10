@@ -1,13 +1,12 @@
 package com.cqjtu.csproject.controller.user;
 
-import com.cqjtu.csproject.dao.model.Users;
+
 import com.cqjtu.csproject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,13 +20,12 @@ import java.util.Map;
 @Controller
 public class userController {
 
-   @Autowired
-   UserService userService;
+//    @Autowired
+//    public UserService userService;
 
     @RequestMapping("/userLogin")
     public Map<String,Object> userLogin(@RequestParam(value = "User_ID",required = false) String userID,
-                                        @RequestParam(value = "PassWords",required = false) String passWords,
-                                        HttpServletRequest request){
+                                        @RequestParam(value = "PassWords",required = false) String passWords){
         Map<String,Object> map = new HashMap<String,Object>();
 
         /*List<Users> islogin = userService.userLogin(userID,passWords);

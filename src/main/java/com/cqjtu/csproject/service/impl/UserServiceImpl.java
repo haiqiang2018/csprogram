@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    UserMapper userMapper;
+    private UserMapper userMapper;
 
     @Override
     public List<Users> userLogin(String username, String password) {
