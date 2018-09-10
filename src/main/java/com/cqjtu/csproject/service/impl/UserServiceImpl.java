@@ -6,9 +6,6 @@ import com.cqjtu.csproject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * author: Bernie
@@ -21,7 +18,16 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
+    public Users findById(String userId) {
+
+        return userMapper.findById(userId);
+    }
+
+
+  /*  @Override
     public List<Users> userLogin(String username, String password) {
         return userMapper.userLogin(username,password);
     }
+*/
+
 }

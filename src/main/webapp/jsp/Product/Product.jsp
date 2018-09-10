@@ -45,6 +45,9 @@
 <jsp:include page="../header.jsp"/>
 <!--End Header End-->
 <!--Begin Menu Begin-->
+
+${users}
+
 <div class="menu_bg">
     <div class="menu">
         <!--Begin 商品分类详情 Begin-->

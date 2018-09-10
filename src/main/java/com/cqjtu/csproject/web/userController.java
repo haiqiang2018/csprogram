@@ -4,6 +4,7 @@ import com.cqjtu.csproject.dao.model.Users;
 import com.cqjtu.csproject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,11 +22,11 @@ import java.util.Map;
  * Time: 23:17
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("user")
 public class userController {
-
     @Autowired
     private UserService userService;
+/*
 
     @RequestMapping("/userLogin")
     @ResponseBody
@@ -46,4 +47,12 @@ public class userController {
 
         return map;
     }
+*/
+@RequestMapping("findById")
+@ResponseBody
+    public Users findById(String userId, ModelMap model){
+    Users user=userService.findById(userId);
+    model.put("user",user);
+    return user;
+}
 }

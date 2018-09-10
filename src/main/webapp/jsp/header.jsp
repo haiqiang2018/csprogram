@@ -107,7 +107,8 @@
         </span>
         <!--End 所在收货地区 End-->
         <span class="fr">
-        	<span class="fl">你好，请<a href="/WEB-INF/jsp/LoginAndEnroll/login.jsp">登录</a>&nbsp; <a href="/WEB-INF/jsp/LoginAndEnroll/enroll.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a
+
+        	<span class="fl">你好，请<a href="/jsp/LoginAndEnroll/login.jsp">登录</a>&nbsp; <a href="/jsp/LoginAndEnroll/enroll.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a
                     href="#">我的订单</a>&nbsp;|</span>
         	<span class="ss">
             	<div class="ss_list">
@@ -157,7 +158,7 @@
     </div>
 </div>
 <div class="top">
-    <div class="logo"><a href="../../index.jsp"><img src="../../static/images/logo.png"/></a></div>
+    <div class="logo"><a href="../index.jsp"><img src="../../static/images/logo.png"/></a></div>
     <div class="search">
         <form>
             <input type="text" value="" class="s_ipt"/>

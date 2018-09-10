@@ -8,13 +8,12 @@
         <result column="UserId" property="userId"/>
         <result column="UName" property="uName"/>
         <result column="UPassword" property="uPassWord"/>
-
     </resultMap>
 
-    <select id="findByUName" resultMap="usersMap" >
-        select * from user
+    <select id="findById" resultType="com.cqjtu.csproject.dao.model.Users">
+        select * from user where UserId=#{userId}
     </select>
-    <insert id="insert" parameterType="com.cqjtu.csproduct.dao.model.Users">
+    <!--<insert id="insert" parameterType="com.cqjtu.csproduct.dao.model.Users">
         INSERT into user(UserId,UPassword,UName) values(#{userId},#{uPassWrd},#{uName})
     </insert>
     <update id="update">
@@ -27,5 +26,5 @@
     <select id="userLogin" resultMap="usersMap">
         SELECT * FROM user WHERE UName=#{username} AND UPassword=#{password}
     </select>
-
+-->
 </mapper>

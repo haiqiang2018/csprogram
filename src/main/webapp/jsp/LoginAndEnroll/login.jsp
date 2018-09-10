@@ -97,7 +97,7 @@
                     var tip=respData.tip;
                     if(state){
                         alert(tip);
-                        window.location.href = "../../../index.jsp";
+                        window.location.href = "../../index.jsp";
                     }else{
                         alert(tip);
                     }
