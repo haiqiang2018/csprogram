@@ -14,7 +14,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link type="text/css" rel="stylesheet" href="../../static/layui/css/layui.css" media="all">
+    <link type="text/css" rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/extraStyle.css?v=20180909"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="css/flow.css"/>
@@ -284,7 +284,7 @@
                                                 </div>
                                         </div>
                                         <div class="contentList" id="contD">
-                                            <span style="position: absolute;color: #888">密码修改成功！</span><a href="login.jsp"style="margin-left: 90px;">点击登录</a>
+                                            <span style="position: absolute;color: #888">密码修改成功！</span><a href="login.jsp" style="margin-left: 90px;">点击登录</a>
                                         </div>
                                     </ol>
                                 </div>

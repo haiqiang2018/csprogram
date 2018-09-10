@@ -6,6 +6,7 @@ import com.cqjtu.csproject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  * Date: 2018/9/8
  * Time: 23:43
  */
-@Service
+@Service("userService")
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;

@@ -15,13 +15,13 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link type="text/css" rel="stylesheet" href="../../static/layui/css/layui.css" media="all">
+    <link type="text/css" rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/extraStyle.css?v=20180909"/>
     <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_644487_hugi3stbvw7v6lxr.css"/>
     <script src="../../static/layui/layui.js"></script>
 </head>
 <body>
-<jsp:include page="../header.jsp"/><img src="./img/nz3.png"style="
+<jsp:include page="../header.jsp"/><img src="img/nz3.png" style="
 ">
 <div class="extra-login">
     <div class="extra-login-div">
@@ -97,7 +97,7 @@
                     var tip=respData.tip;
                     if(state){
                         alert(tip);
-                        window.location.href = "../index.jsp";
+                        window.location.href = "../../../index.jsp";
                     }else{
                         alert(tip);
                     }

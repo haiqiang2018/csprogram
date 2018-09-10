@@ -319,13 +319,13 @@
                 <div id="tsImgSCon">
                     <ul>
                         <li onclick="showPic(0)" rel="MagicZoom" class="tsSelectImg"><img src="http://www.17sucai.com/preview/216556/2016-02-18/%E5%B0%A4%E6%B4%AAWeb/images/ps1.jpg" tsImgS="http://www.17sucai.com/preview/216556/2016-02-18/%E5%B0%A4%E6%B4%AAWeb/images/ps1.jpg" width="79" height="79" /></li>
-                        <li onclick="showPic(1)" rel="MagicZoom"><img src="../../static/images/m1.jpg" tsImgS="../../static/images/m1.jpg" width="79" height="79" /></li>
-                        <li onclick="showPic(2)" rel="MagicZoom"><img src="../../static/images/m3.jpg" tsImgS="../../static/images/m3.jpg" width="79" height="79" /></li>
-                        <li onclick="showPic(3)" rel="MagicZoom"><img src="../../static/images/m2.jpg" tsImgS="../../static/images/m2.jpg" width="79" height="79" /></li>
-                        <li onclick="showPic(4)" rel="MagicZoom"><img src="../../static/images/m1.jpg" tsImgS="../../static/images/m1.jpg" width="79" height="79" /></li>
-                        <li onclick="showPic(5)" rel="MagicZoom"><img src="../../static/images/m4.jpg" tsImgS="../../static/images/m4.jpg" width="79" height="79" /></li>
-                        <li onclick="showPic(6)" rel="MagicZoom"><img src="../../static/images/m5.jpg" tsImgS="../../static/images/m5.jpg" width="79" height="79" /></li>
-                        <li onclick="showPic(7)" rel="MagicZoom"><img src="../../static/images/m1.jpg" tsImgS="../../static/images/m1.jpg" width="79" height="79" /></li>
+                        <li onclick="showPic(1)" rel="MagicZoom"><img src="../../../static/images/m1.jpg" tsImgS="../../static/images/m1.jpg" width="79" height="79" /></li>
+                        <li onclick="showPic(2)" rel="MagicZoom"><img src="../../../static/images/m3.jpg" tsImgS="../../static/images/m3.jpg" width="79" height="79" /></li>
+                        <li onclick="showPic(3)" rel="MagicZoom"><img src="../../../static/images/m2.jpg" tsImgS="../../static/images/m2.jpg" width="79" height="79" /></li>
+                        <li onclick="showPic(4)" rel="MagicZoom"><img src="../../../static/images/m1.jpg" tsImgS="../../static/images/m1.jpg" width="79" height="79" /></li>
+                        <li onclick="showPic(5)" rel="MagicZoom"><img src="../../../static/images/m4.jpg" tsImgS="../../static/images/m4.jpg" width="79" height="79" /></li>
+                        <li onclick="showPic(6)" rel="MagicZoom"><img src="../../../static/images/m5.jpg" tsImgS="../../static/images/m5.jpg" width="79" height="79" /></li>
+                        <li onclick="showPic(7)" rel="MagicZoom"><img src="../../../static/images/m1.jpg" tsImgS="../../static/images/m1.jpg" width="79" height="79" /></li>
                     </ul>
                 </div>
                 <div id="tsImgSArrR" onclick="tsScrollArrRight()"></div>
@@ -361,11 +361,11 @@
                 <div class="d_sh">
                     分享
                     <div class="d_sh_bg">
-                        <a href="#"><img src="../../static/images/m1.jpg" /></a>
-                        <a href="#"><img src="../../static/images/m2.jpg" /></a>
-                        <a href="#"><img src="../../static/images/m3.jpg" /></a>
-                        <a href="#"><img src="../../static/images/m5.jpg" /></a>
-                        <a href="#"><img src="../../static/images/m4.jpg" /></a>
+                        <a href="#"><img src="../../../static/images/m1.jpg" /></a>
+                        <a href="#"><img src="../../../static/images/m2.jpg" /></a>
+                        <a href="#"><img src="../../../static/images/m3.jpg" /></a>
+                        <a href="#"><img src="../../../static/images/m5.jpg" /></a>
+                        <a href="#"><img src="../../../static/images/m4.jpg" /></a>
                     </div>
                 </div>
                 <div class="d_care"><a onclick="ShowDiv('MyDiv','fade')">关注商品</a></div>
