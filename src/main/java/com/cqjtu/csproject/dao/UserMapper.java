@@ -12,4 +12,5 @@ public interface UserMapper {
     Users userLogin(@Param("userEmil") String userEmil,
                     @Param("passWords") String passWords);
 
+    String getUserEmail(String username);
 }

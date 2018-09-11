@@ -2,11 +2,16 @@ package com.cqjtu.csproject.dao;
 
 import com.cqjtu.csproject.dao.model.Order;
 
+import java.util.List;
+
 
 public interface OrderMapper {
-    Order findByOId(String oId);
 
-    /*Order userLogin(@Param("userEmil") String userEmil,
-                    @Param("passWords") String passWords);*/
+    /**
+     * 查询用户的订单
+     * @param userEmail
+     * @return
+     */
+    List<Order> findAllOrders(String userEmail);
 
 }

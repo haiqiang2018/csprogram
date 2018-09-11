@@ -5,6 +5,7 @@
   Time: 15:46
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <html>
 <head>
@@ -21,7 +22,7 @@
 <body>
 <jsp:include page="../header.jsp"/>
 
-<table id="demo" lay-filter="test"></table>
+<table class="layui-table" id="demo" <%--lay-filter="test"--%>></table>
 
 <script src="../../static/layui/layui.js"></script>
 <script>
@@ -31,21 +32,19 @@
         //第一个实例
         table.render({
             elem: '#demo'
-            ,height: 312
-            ,margin:-200
-            ,url: '/demo/table/user/' //数据接口
+            ,width: 1007
+            ,height: 300
+            /*,margin:200*/
+            ,url: '<c:url value="/order/findAllOrders" />' //数据接口
             ,page: true //开启分页
             ,cols: [[ //表头
-                {field: 'wealth', title: '', width: 100}
-                ,{field: 'oz', title: '编号', width:200, sort: true}
+                {field: 'oz', title: '编号', width:100, sort: true}
                 ,{field: 'oId', title: '订单号', width:200, sort: true}
-                ,{field: 'uName', title: '用户名', width:200}
+                ,{field: 'userName', title: '用户名', width:200}
                 ,{field: 'oTime', title: '下单时间', width:200, sort: true}
-                ,{field: 'oMoney', title: '订单总额', width: 200}
-                ,{field: 'oStates', title: '订单状态', width: 200}
-               ,{field: 'score', title: '', width: 150}
-               /*  ,{field: 'classify', title: '职业', width: 80}
-                ,*/
+                ,{field: 'oMoney', title: '订单总额', width: 150}
+                ,{field: 'oStates', title: '订单状态', width: 150}
+               /*,{field: 'score', title: '', width: 150}*/
             ]]
         });
 

@@ -13,6 +13,10 @@
     <select id="findById" resultType="com.cqjtu.csproject.dao.model.Users">
         select * from user where UserId=#{userId}
     </select>
+
+    <select id="getUserEmail" resultType="String">
+        SELECT UserEmil from user where UName=#{username}
+    </select>
     <!--<insert id="insert" parameterType="com.cqjtu.csproduct.dao.model.Users">
         INSERT into user(UserId,UPassword,UName) values(#{userId},#{uPassWrd},#{uName})
     </insert>
@@ -24,7 +28,7 @@
     </delete>-->
 
     <select id="userLogin" resultType="com.cqjtu.csproject.dao.model.Users">
-        SELECT * FROM user WHERE UserId=#{userId} AND UPassword=#{passWords}
+        SELECT * FROM user WHERE UserEmil=#{userEmil} AND UPassword=#{passWords}
     </select>
 
 </mapper>

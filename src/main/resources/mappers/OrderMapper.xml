@@ -4,16 +4,31 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cqjtu.csproject.dao.OrderMapper">
 
-    <resultMap type="com.cqjtu.csproject.dao.model.Order" id="orderMap">
+    <resultMap id="orderMap" type="com.cqjtu.csproject.dao.model.Order">
         <result column="OId" property="oId"/>
+        <result column="UserEmil" property="userEmail"/>
         <result column="OTime" property="oTime"/>
         <result column="OStates" property="oStates"/>
         <result column="Oz" property="oz"/>
         <result column="OMoney" property="oMoney"/>
+        <result column="UName" property="userName"/>
     </resultMap>
 
-    <select id="findByOId" resultType="com.cqjtu.csproject.dao.model.Order">
-       SELECT *FROM orderr WHERE OId=#{oId}
+    <select id="findAllOrders" resultMap="orderMap">
+         SELECT
+	         o.OId,
+	         o.UserEmil,
+	         o.OTime,
+	         o.OStates,
+	         o.Oz,
+	         o.OMoney,
+	         u.UName
+          FROM
+	         orderr o,
+	         user u
+         WHERE
+	        o.UserEmil = u.UserEmil
+         AND u.UserEmil =#{userEmail}
     </select>
     <!--<insert id="insert" parameterType="com.cqjtu.csproduct.dao.model.Users">
         INSERT into user(UserId,UPassword,UName) values(#{userId},#{uPassWrd},#{uName})

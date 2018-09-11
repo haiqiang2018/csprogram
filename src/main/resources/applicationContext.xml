@@ -25,7 +25,7 @@
     <!-- 配置mybatis的sqlSessionFactory -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="mapperLocations" value="classpath:mappers/UserMapper.xml"/>
+        <property name="mapperLocations" value="classpath:mappers/*.xml"/>
         <property name="configuration">
             <bean class="org.apache.ibatis.session.Configuration">
                 <property name="mapUnderscoreToCamelCase" value="true"/>

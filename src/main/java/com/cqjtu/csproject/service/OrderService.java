@@ -1,14 +1,15 @@
 package com.cqjtu.csproject.service;
 
 import com.cqjtu.csproject.dao.model.Order;
-import com.cqjtu.csproject.dao.model.Users;
+
+import java.util.List;
 
 public interface OrderService {
+
     /**
-     * 测试连接数据库
-     * @param oId
+     * 查询用户的订单
+     * @param userEmail
      * @return
      */
-    Order findByOId(String oId);
-
+    List<Order> findAllOrders(String userEmail);
 }

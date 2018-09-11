@@ -1,13 +1,33 @@
 package com.cqjtu.csproject.dao.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Order {
     String oId;
-    Date oTime;
+    String oTime;
     boolean oStates;
     int oz;
     float oMoney;
+    String userEmail;
+    String userName;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
 
     public String getoId() {
         return oId;
@@ -17,11 +37,11 @@ public class Order {
         this.oId = oId;
     }
 
-    public Date getoTime() {
+    public String getoTime() {
         return oTime;
     }
 
-    public void setoTime(Date oTime) {
+    public void setoTime(String oTime) {
         this.oTime = oTime;
     }
 

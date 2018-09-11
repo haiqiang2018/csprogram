@@ -28,4 +28,5 @@ public interface UserService {
        */
       Users userLogin(String userEmil, String passWords);
 
+      String getUserEail(String username);
 }

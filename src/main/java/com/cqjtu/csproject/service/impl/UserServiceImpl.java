@@ -30,4 +30,10 @@ public class UserServiceImpl implements UserService {
         return userMapper.userLogin(userEmil, passWords);
     }
 
+    @Override
+    public String getUserEail(String username) {
+        return userMapper.getUserEmail(username);
+    }
+
+
 }
