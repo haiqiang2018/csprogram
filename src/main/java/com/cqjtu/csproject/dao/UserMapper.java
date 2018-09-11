@@ -4,7 +4,6 @@ package com.cqjtu.csproject.dao;
 import com.cqjtu.csproject.dao.model.Users;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
 
 public interface UserMapper {
 
@@ -12,4 +11,5 @@ public interface UserMapper {
 
     Users userLogin(@Param("userEmil") String userEmil,
                     @Param("passWords") String passWords);
+
 }
