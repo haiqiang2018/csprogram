@@ -24,7 +24,7 @@
     </delete>-->
 
     <select id="userLogin" resultType="com.cqjtu.csproject.dao.model.Users">
-        SELECT * FROM user WHERE UserId=#{userId}
+        SELECT * FROM user WHERE UserId=#{userId} AND UPassword=#{passWords}
     </select>
 
 </mapper>
