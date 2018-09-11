@@ -11,5 +11,10 @@ public interface UserMapper {
 
     Users userLogin(@Param("userEmil") String userEmil,
                     @Param("passWords") String passWords);
+    int insert(Users user);
 
+    int userEnroll(@Param("uPhone")String uPhone,
+                   @Param("userEmil")String userEmil,
+                   @Param("uName")String uName,
+                   @Param("uPassWord")String uPassWord1);
 }

@@ -42,9 +42,7 @@
             $(":password").keyup(function() {
                 var val = $(this).val();
                 $("p1").text(val.length);
-                var num = checkStrong(val)
-
-                ;
+                var num = checkStrong(val);
                 switch (num) {
                     case 0: break;
                     case 1: $("#tips span").css('background', 'yellow').text('').eq(num - 1).css('background', 'red').text(aStr[num - 1]);
@@ -88,10 +86,10 @@ margin-bottom: 30px;">
     </div>
     <div class="layui-form-item">
         <div class="layui-inline">
-        <label class="layui-form-label">*身份证号：</label>
-        <div class="layui-input-block">
-            <input type="text" id="IDcard"name="IDcard" lay-verify="required|identity" placeholder="" autocomplete="off" class="extra-input layui-input">
-        </div>
+            <label class="layui-form-label">*用户昵称：</label>
+            <div class="layui-input-inline">
+                <input type="text" id="userName"name="email" lay-verify="required|email" autocomplete="off" class="layui-input extra-input">
+            </div>
         </div>
     </div>
     <div class="layui-form-item">
@@ -150,12 +148,12 @@ margin-bottom: 30px;">
                 dataType: "json",
                 async: false,
                 data: {
-                    User_ID: $("#User_ID").val(),
+                    /*User_ID: $("#User_ID").val(),*/
                     PhoneNum: $("#PhoneNum").val(),
                     Email: $("#email").val(),
-                    IDcard: $("#IDcard").val(),
-                    EnrollDate: $("#EnrollDate").val(),
-                    Sex: $('input:radio[name="Sex"]:checked').val(),
+                    userName:$("#UserName").val(),
+                    /*EnrollDate: $("#EnrollDate").val(),*/
+                  /*  Sex: $('input:radio[name="Sex"]:checked').val(),*/
                     PassWord: /*$.md5(document.getElementById('PassWord').value)*/$("#PassWord").val(),
                 }
             })

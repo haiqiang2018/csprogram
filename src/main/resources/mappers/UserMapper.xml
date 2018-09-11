@@ -15,10 +15,12 @@
     <select id="findByName" resultType="com.cqjtu.csproject.dao.model.Users">
         select * from user where UName=#{uName}
     </select>
-    <!--<insert id="insert" parameterType="com.cqjtu.csproduct.dao.model.Users">
-        INSERT into user(UserId,UPassword,UName) values(#{userId},#{uPassWrd},#{uName})
+
+    <insert id="userEnroll" parameterType="com.cqjtu.csproject.dao.model.Users">
+        INSERT into user(UserEmil,UName,UPassword,UState,UPhone) values(#{userEmil},#{uName},#{uPassWord},1,uPhone)
     </insert>
-    <update id="update">
+
+    <!--<update id="update">
         UPDATE user SET UName=#{uName} where UId=#{uId}
     </update>
     <delete id="deleteByUId">
