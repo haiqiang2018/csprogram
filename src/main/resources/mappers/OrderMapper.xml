@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cqjtu.csproject.dao.OrderMapper">
+
+    <resultMap type="com.cqjtu.csproject.dao.model.Order" id="orderMap">
+        <result column="OId" property="oId"/>
+        <result column="OTime" property="oTime"/>
+        <result column="OStates" property="oStates"/>
+        <result column="Oz" property="oz"/>
+        <result column="OMoney" property="oMoney"/>
+    </resultMap>
+
+    <select id="findByOId" resultType="com.cqjtu.csproject.dao.model.Order">
+       SELECT *FROM orderr WHERE OId=#{oId}
+    </select>
+    <!--<insert id="insert" parameterType="com.cqjtu.csproduct.dao.model.Users">
+        INSERT into user(UserId,UPassword,UName) values(#{userId},#{uPassWrd},#{uName})
+    </insert>
+    <update id="update">
+        UPDATE user SET UName=#{uName} where UId=#{uId}
+    </update>
+    <delete id="deleteByUId">
+        DELETE FROM user where UserId=#{userId}
+    </delete>-->
+
+    <!--<select id="userLogin" resultType="com.cqjtu.csproject.dao.model.Users">
+        SELECT * FROM user WHERE UserEmil=#{userEmil} AND UPassword=#{passWords}
+    </select>-->
+
+</mapper>

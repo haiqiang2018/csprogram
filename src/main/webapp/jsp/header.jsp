@@ -110,7 +110,7 @@
         <span class="fr">
         	<span class="fl">
                 <c:if test="${username != null}">
-                    &nbsp;欢迎您，<a href="/jsp/PersonalCenter/Member.jsp">${username}&nbsp;</a><a href="#">我的订单</a>&nbsp;|
+                    &nbsp;欢迎您，<a href="/jsp/PersonalCenter/Member.jsp">${username}&nbsp;</a><a href="/jsp/UserOrder/UserOrder.jsp">我的订单</a>&nbsp;|
                 </c:if>
                 <c:if test="${empty username}">
                  你好，请<a href="/jsp/LoginAndEnroll/login.jsp">登录</a>&nbsp; <a href="/jsp/LoginAndEnroll/enroll.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;</span>

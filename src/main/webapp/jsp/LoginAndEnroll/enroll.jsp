@@ -15,7 +15,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../static/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="css/extraStyle.css" media="all">
     <link rel="stylesheet" href="css/imgUpload.css" media="all">
     <script src="../../static/common/jQuery/jquery-3.3.1.min.js"></script>
