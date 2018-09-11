@@ -53,6 +53,39 @@ public class userController {
         return map;
     }
 
+    /**
+     * 注册
+     * @param uPhone
+     * @param userEmil
+     * @param uName
+     * @param uPassWord
+     * @param request
+     * @param model
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/userEnroll")
+    @ResponseBody
+    public Map<String, Object> userEnroll(@RequestParam(value = "PhoneNum", required = false) String uPhone,
+                                         @RequestParam(value = "Email", required = false) String userEmil,
+                                         @RequestParam(value = "userName", required = false) String uName,
+                                         @RequestParam(value = "PassWord", required = false) String uPassWord,
+                                         HttpServletRequest request,ModelMap model) throws Exception {
+        Map<String, Object> map = new HashMap<String, Object>();
+        int user=userService.userEnroll(uPhone,userEmil,uName,uPassWord);
+
+        if(user>0){
+            map.put("enrollSuccess",1);
+        } else {
+            map.put("enrollFail",0);
+        }
+
+        model.put("enrollMap",map);
+
+        return  map;
+
+    }
+
     @RequestMapping("findByName")
     @ResponseBody
     public Users findById(String uName, ModelMap model) {
@@ -60,4 +93,5 @@ public class userController {
         model.put("user", user);
         return user;
     }
+
 }

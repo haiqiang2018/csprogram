@@ -29,4 +29,5 @@ public interface UserService {
       Users userLogin(String userEmil, String passWords);
 
       String getUserEail(String username);
+      int userEnroll(String uPhone, String userEmil, String uName, String uPassWord);
 }

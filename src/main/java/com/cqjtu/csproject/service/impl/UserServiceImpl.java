@@ -36,4 +36,9 @@ public class UserServiceImpl implements UserService {
     }
 
 
+    @Override
+    public int userEnroll(String uPhone, String userEmil, String uName, String uPassWord) {
+        return userMapper.userEnroll(uPhone,userEmil,uName,uPassWord);
+    }
+
 }
