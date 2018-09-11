@@ -14,18 +14,18 @@ public interface UserService {
 
       /**
        * 测试连接数据库
-       * @param userId
+       * @param uName
        * @return
        */
-      Users findById(String userId);
+      Users findByName(String uName);
 
 
       /**
        * 用户登录
-       * @param username 用户名
-       * @param password 用户密码
+       * @param userEmil 用户邮箱
+       * @param passWords 用户密码
        * @return
        */
-      Users userLogin(String userId, String passWords);
+      Users userLogin(String userEmil, String passWords);
 
 }

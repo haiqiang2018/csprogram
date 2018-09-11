@@ -21,8 +21,7 @@
     <script src="../../static/layui/layui.js"></script>
 </head>
 <body>
-<jsp:include page="../header.jsp"/><img src="img/nz3.png" style="
-">
+<jsp:include page="../header.jsp"/><img src="img/nz3.png" style="">
 <div class="extra-login">
     <div class="extra-login-div">
         <a href="AdLogin.jsp" style="font-size: 16px;float: right;">管理员入口</a>
@@ -42,7 +41,7 @@
                     <label class="iconfont icon-account layui-form-label2"
                            style="font-size: x-large;color: rgb(255,134,136);"></label>
                     <div class="layui-input-inline">
-                        <input type="text" name="User_ID" id="User_ID"  class="extra-input layui-input">
+                        <input type="text" name="UserEmil" id="UserEmil"  class="extra-input layui-input">
                     </div>
                 </div>
 
@@ -89,7 +88,7 @@
                 dataType:"json",
                 async:false,
                 data:{
-                    User_ID:$("#User_ID").val(),
+                    UserEmil:$("#UserEmil").val(),
                     PassWords:$("#PassWords").val()/*$.md5(document.getElementById('PassWords').value)*/
                 },
                  success:function (respData) {

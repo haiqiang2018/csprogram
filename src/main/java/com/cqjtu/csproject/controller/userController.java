@@ -30,12 +30,13 @@ public class userController {
 
     @RequestMapping("/userLogin")
     @ResponseBody
-    public Map<String, Object> userLogin(@RequestParam(value = "User_ID", required = false) String userId,
+    public Map<String, Object> userLogin(@RequestParam(value = "UserEmil", required = false) String userEmil,
                                          @RequestParam(value = "PassWords", required = false) String passWords,
                                          HttpServletRequest request,ModelMap model) throws Exception {
         Map<String, Object> map = new HashMap<String, Object>();
 
-        Users islogin = userService.userLogin(userId,passWords);
+        Users islogin = userService.userLogin(userEmil,passWords);
+        System.out.println(islogin);
 
         if(islogin != null ){
             map.put("loginscuccess",1);
@@ -49,14 +50,13 @@ public class userController {
             map.put("tip","登录失败，用户名或密码错误！");
         }
         model.put("map",map);
-
         return map;
     }
 
-    @RequestMapping("findById")
+    @RequestMapping("findByName")
     @ResponseBody
-    public Users findById(String userId, ModelMap model) {
-        Users user = userService.findById(userId);
+    public Users findById(String uName, ModelMap model) {
+        Users user = userService.findByName(uName);
         model.put("user", user);
         return user;
     }
