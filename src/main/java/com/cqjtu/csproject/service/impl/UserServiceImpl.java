@@ -19,15 +19,15 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+
     @Override
-    public Users findById(String userId) {
-        return userMapper.findById(userId);
+    public Users findByName(String uName) {
+        return userMapper.findByName(uName);
     }
 
-
     @Override
-    public Users userLogin(String userId, String passWords) {
-        return userMapper.userLogin(userId, passWords);
+    public Users userLogin(String userEmil, String passWords) {
+        return userMapper.userLogin(userEmil, passWords);
     }
 
 }

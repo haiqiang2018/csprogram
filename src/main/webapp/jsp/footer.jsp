@@ -31,7 +31,7 @@
 <body>
 
 <!--Begin Footer Begin -->
-<div id="footer_t" class="b_btm_bg bg_color">
+<div id="footer_t" class="b_btm_bg bg_color" style="padding-bottom: 50px">
     <div class="b_btm">
         <table border="0" style="width:210px; height:62px; float:left; margin-left:75px; margin-top:30px;"
                cellspacing="0" cellpadding="0">
@@ -67,7 +67,7 @@
         </table>
     </div>
 </div>
-<div class="b_nav">
+<%--<div class="b_nav">
     <dl>
         <dt><a href="#">新手上路</a></dt>
         <dd><a href="#">售后流程</a></dd>
@@ -125,7 +125,7 @@
             src="http://www.17sucai.com/preview/216556/2016-02-18/尤洪Web/images/b_5.gif" width="98" height="33"/><img
             src="http://www.17sucai.com/preview/216556/2016-02-18/尤洪Web/images/b_6.gif" width="98" height="33"/>
     </div>
-</div>
+</div>--%>
 <!--End Footer End -->
 
 </body>

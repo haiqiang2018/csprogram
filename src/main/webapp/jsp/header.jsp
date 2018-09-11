@@ -108,17 +108,14 @@
         </span>
         <!--End 所在收货地区 End-->
         <span class="fr">
-
         	<span class="fl">
                 <c:if test="${username != null}">
-                    &nbsp;欢迎您，<a href="#">${username}&nbsp;</a>
+                    &nbsp;欢迎您，<a href="/jsp/PersonalCenter/Member.jsp">${username}&nbsp;</a><a href="#">我的订单</a>&nbsp;|
                 </c:if>
                 <c:if test="${empty username}">
-                 你好，请<a href="/jsp/LoginAndEnroll/login.jsp">登录</a>&nbsp; <a href="/jsp/LoginAndEnroll/enroll.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a
-                    href="#">我的订单</a>&nbsp;|</span>
+                 你好，请<a href="/jsp/LoginAndEnroll/login.jsp">登录</a>&nbsp; <a href="/jsp/LoginAndEnroll/enroll.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;</span>
                 </c:if>
-
-        	<span class="ss">
+        	<%--<span class="ss">
             	<div class="ss_list">
                 	<a href="#">收藏夹</a>
                     <div class="ss_list_bg">
@@ -161,7 +158,7 @@
             <span class="s_sh"><a href="#" class="sh1">新浪</a><a href="#" class="sh2">微信</a></span>
             <span class="fr">|&nbsp;<a href="#">手机版&nbsp;<img
                     src="http://www.17sucai.com/preview/216556/2016-02-18/尤洪Web/images/s_tel.png"
-                    align="middle"/></a></span>
+                    align="middle"/></a></span>--%>
         </span>
     </div>
 </div>
@@ -179,9 +176,17 @@
         <div class="car_t">购物车 [ <span>3</span> ]</div>
         <div class="car_bg">
             <!--Begin 购物车未登录 Begin-->
-            <div class="un_login">还未登录！<a href="LoginAndEnroll/login.jsp" style="color:#ff4e00;">马上登录</a> 查看购物车！</div>
+            <c:if test="${empty username}">
+                <div class="un_login">还未登录！<a href="/jsp/LoginAndEnroll/login.jsp" style="color:#ff4e00;">马上登录</a>
+                    查看购物车！
+                </div>
+            </c:if>
             <!--End 购物车未登录 End-->
             <!--Begin 购物车已登录 Begin-->
+            <c:if test="${username != null}">
+                <h4>我的购物车</h4>
+            </c:if>
+
             <ul class="cars">
                 <li>
                     <div class="img"><a href="#"><img
@@ -206,7 +211,7 @@
                 </li>
             </ul>
             <div class="price_sum">共计&nbsp; <font color="#ff4e00">￥</font><span>1058</span></div>
-            <div class="price_a"><a href="#">去购物车结算</a></div>
+            <div class="price_a"><a href="/jsp/BuyCar/BuyCar.jsp">去购物车结算</a></div>
             <!--End 购物车已登录 End-->
         </div>
     </div>

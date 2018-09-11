@@ -10,26 +10,11 @@ import java.io.Serializable;
  */
 public class Users implements Serializable{
 
-    String userId;
-    int pId;
     String uPassWord;
     String uName;
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public int getpId() {
-        return pId;
-    }
-
-    public void setpId(int pId) {
-        this.pId = pId;
-    }
+    String userEmil;
+    int uState;
+    String uPhone;
 
     public String getuPassWord() {
         return uPassWord;
@@ -47,13 +32,38 @@ public class Users implements Serializable{
         this.uName = uName;
     }
 
+    public String getUserEmil() {
+        return userEmil;
+    }
+
+    public void setUserEmil(String userEmil) {
+        this.userEmil = userEmil;
+    }
+
+    public int getuState() {
+        return uState;
+    }
+
+    public void setuState(int uState) {
+        this.uState = uState;
+    }
+
+    public String getuPhone() {
+        return uPhone;
+    }
+
+    public void setuPhone(String uPhone) {
+        this.uPhone = uPhone;
+    }
+
     @Override
     public String toString() {
         return "Users{" +
-                "userId='" + userId + '\'' +
-                ", pId=" + pId +
-                ", uPassWord='" + uPassWord + '\'' +
+                "uPassWord='" + uPassWord + '\'' +
                 ", uName='" + uName + '\'' +
+                ", userEmil='" + userEmil + '\'' +
+                ", uState=" + uState +
+                ", uPhone='" + uPhone + '\'' +
                 '}';
     }
 }

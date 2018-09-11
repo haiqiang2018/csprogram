@@ -5,13 +5,15 @@
 <mapper namespace="com.cqjtu.csproject.dao.UserMapper">
 
     <resultMap type="com.cqjtu.csproject.dao.model.Users" id="usersMap">
-        <result column="UserId" property="userId"/>
+        <result column="UserEmil" property="userEmil"/>
         <result column="UName" property="uName"/>
-        <result column="UPassword" property="uPassWord"/>
+        <result column="UPassword" property="passWords"/>
+        <result column="UState" property="uState"/>
+        <result column="UPhone" property="uPhone"/>
     </resultMap>
 
-    <select id="findById" resultType="com.cqjtu.csproject.dao.model.Users">
-        select * from user where UserId=#{userId}
+    <select id="findByName" resultType="com.cqjtu.csproject.dao.model.Users">
+        select * from user where UName=#{uName}
     </select>
     <!--<insert id="insert" parameterType="com.cqjtu.csproduct.dao.model.Users">
         INSERT into user(UserId,UPassword,UName) values(#{userId},#{uPassWrd},#{uName})
@@ -24,7 +26,7 @@
     </delete>-->
 
     <select id="userLogin" resultType="com.cqjtu.csproject.dao.model.Users">
-        SELECT * FROM user WHERE UserId=#{userId}
+        SELECT * FROM user WHERE UserEmil=#{userEmil} AND UPassword=#{passWords}
     </select>
 
 </mapper>
